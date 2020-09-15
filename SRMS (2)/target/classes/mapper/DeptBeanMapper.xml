@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.DeptBeanMapper">
+  <resultMap id="BaseResultMap" type="com.spring.bean.DeptBean">
+    <id column="dno" jdbcType="VARCHAR" property="dno" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="principal" jdbcType="VARCHAR" property="principal" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    dno, name, principal, mobile, remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dept
+    where dno = #{dno,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from dept
+    where dno = #{dno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.spring.bean.DeptBean">
+    insert into dept (dno, name, principal, 
+      mobile, remark)
+    values (#{dno,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{principal,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.spring.bean.DeptBean">
+    insert into dept
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="dno != null">
+        dno,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="principal != null">
+        principal,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="dno != null">
+        #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="principal != null">
+        #{principal,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.spring.bean.DeptBean">
+    update dept
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="principal != null">
+        principal = #{principal,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where dno = #{dno,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.spring.bean.DeptBean">
+    update dept
+    set name = #{name,jdbcType=VARCHAR},
+      principal = #{principal,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR}
+    where dno = #{dno,jdbcType=VARCHAR}
+  </update>
+  <select id="list" parameterType="com.spring.bean.DeptBean" resultMap="BaseResultMap">
+  	select
+  	<include refid="Base_Column_List" />
+    from dept
+    <trim prefix="where" prefixOverrides="OR|AND">
+      <if test="dno != null">
+        dno = #{dno,jdbcType=VARCHAR}
+      </if>
+      <if test="name != null">
+        and name = #{name,jdbcType=VARCHAR}
+      </if>
+      <if test="leader != null">
+        and leader = #{leader,jdbcType=VARCHAR}
+      </if>
+      <if test="tel != null">
+        and tel = #{tel,jdbcType=VARCHAR}
+      </if>
+     </trim>
+  </select>
+</mapper>

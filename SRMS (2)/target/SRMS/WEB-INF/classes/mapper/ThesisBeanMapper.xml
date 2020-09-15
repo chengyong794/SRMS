@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.ThesisBeanMapper">
+  <resultMap id="BaseResultMap" type="com.spring.bean.ThesisBean">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="dno" jdbcType="VARCHAR" property="dno" />
+    <result column="tno" jdbcType="VARCHAR" property="tno" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="thesisTitle" jdbcType="VARCHAR" property="thesistitle" />
+    <result column="serialTitle" jdbcType="VARCHAR" property="serialtitle" />
+    <result column="serialDate" jdbcType="VARCHAR" property="serialdate" />
+    <result column="serialLevel" jdbcType="VARCHAR" property="seriallevel" />
+    <result column="publishData" jdbcType="VARCHAR" property="publishdata" />
+    <result column="adjunct" jdbcType="VARCHAR" property="adjunct" />
+    <result column="bounty" jdbcType="INTEGER" property="bounty" />
+    <result column="firstTrial" jdbcType="VARCHAR" property="firsttrial" />
+    <result column="review" jdbcType="VARCHAR" property="review" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, dno, tno, author, thesisTitle, serialTitle, serialDate, serialLevel, publishData, 
+    adjunct, bounty, firstTrial, review, remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from thesis
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from thesis
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.spring.bean.ThesisBean">
+    insert into thesis (id, dno, tno, 
+      author, thesisTitle, serialTitle, 
+      serialDate, serialLevel, publishData, 
+      adjunct, bounty, firstTrial, 
+      review, remark)
+    values (#{id,jdbcType=VARCHAR}, #{dno,jdbcType=VARCHAR}, #{tno,jdbcType=VARCHAR}, 
+      #{author,jdbcType=VARCHAR}, #{thesistitle,jdbcType=VARCHAR}, #{serialtitle,jdbcType=VARCHAR}, 
+      #{serialdate,jdbcType=VARCHAR}, #{seriallevel,jdbcType=VARCHAR}, #{publishdata,jdbcType=VARCHAR}, 
+      #{adjunct,jdbcType=VARCHAR}, #{bounty,jdbcType=INTEGER}, #{firsttrial,jdbcType=VARCHAR}, 
+      #{review,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.spring.bean.ThesisBean">
+    insert into thesis
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="dno != null">
+        dno,
+      </if>
+      <if test="tno != null">
+        tno,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="thesistitle != null">
+        thesisTitle,
+      </if>
+      <if test="serialtitle != null">
+        serialTitle,
+      </if>
+      <if test="serialdate != null">
+        serialDate,
+      </if>
+      <if test="seriallevel != null">
+        serialLevel,
+      </if>
+      <if test="publishdata != null">
+        publishData,
+      </if>
+      <if test="adjunct != null">
+        adjunct,
+      </if>
+      <if test="bounty != null">
+        bounty,
+      </if>
+      <if test="firsttrial != null">
+        firstTrial,
+      </if>
+      <if test="review != null">
+        review,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="dno != null">
+        #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="tno != null">
+        #{tno,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistitle != null">
+        #{thesistitle,jdbcType=VARCHAR},
+      </if>
+      <if test="serialtitle != null">
+        #{serialtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="serialdate != null">
+        #{serialdate,jdbcType=VARCHAR},
+      </if>
+      <if test="seriallevel != null">
+        #{seriallevel,jdbcType=VARCHAR},
+      </if>
+      <if test="publishdata != null">
+        #{publishdata,jdbcType=VARCHAR},
+      </if>
+      <if test="adjunct != null">
+        #{adjunct,jdbcType=VARCHAR},
+      </if>
+      <if test="bounty != null">
+        #{bounty,jdbcType=INTEGER},
+      </if>
+      <if test="firsttrial != null">
+        #{firsttrial,jdbcType=VARCHAR},
+      </if>
+      <if test="review != null">
+        #{review,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.spring.bean.ThesisBean">
+    update thesis
+    <set>
+      <if test="dno != null">
+        dno = #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="tno != null">
+        tno = #{tno,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistitle != null">
+        thesisTitle = #{thesistitle,jdbcType=VARCHAR},
+      </if>
+      <if test="serialtitle != null">
+        serialTitle = #{serialtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="serialdate != null">
+        serialDate = #{serialdate,jdbcType=VARCHAR},
+      </if>
+      <if test="seriallevel != null">
+        serialLevel = #{seriallevel,jdbcType=VARCHAR},
+      </if>
+      <if test="publishdata != null">
+        publishData = #{publishdata,jdbcType=VARCHAR},
+      </if>
+      <if test="adjunct != null">
+        adjunct = #{adjunct,jdbcType=VARCHAR},
+      </if>
+      <if test="bounty != null">
+        bounty = #{bounty,jdbcType=INTEGER},
+      </if>
+      <if test="firsttrial != null">
+        firstTrial = #{firsttrial,jdbcType=VARCHAR},
+      </if>
+      <if test="review != null">
+        review = #{review,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.spring.bean.ThesisBean">
+    update thesis
+    set dno = #{dno,jdbcType=VARCHAR},
+      tno = #{tno,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      thesisTitle = #{thesistitle,jdbcType=VARCHAR},
+      serialTitle = #{serialtitle,jdbcType=VARCHAR},
+      serialDate = #{serialdate,jdbcType=VARCHAR},
+      serialLevel = #{seriallevel,jdbcType=VARCHAR},
+      publishData = #{publishdata,jdbcType=VARCHAR},
+      adjunct = #{adjunct,jdbcType=VARCHAR},
+      bounty = #{bounty,jdbcType=INTEGER},
+      firstTrial = #{firsttrial,jdbcType=VARCHAR},
+      review = #{review,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

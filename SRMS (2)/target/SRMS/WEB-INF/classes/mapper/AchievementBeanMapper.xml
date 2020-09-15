@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.dao.AchievementBeanMapper">
+  <resultMap id="BaseResultMap" type="com.spring.bean.AchievementBean">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="dno" jdbcType="VARCHAR" property="dno" />
+    <result column="tno" jdbcType="VARCHAR" property="tno" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="awardsUnit" jdbcType="VARCHAR" property="awardsunit" />
+    <result column="awardsDate" jdbcType="VARCHAR" property="awardsdate" />
+    <result column="authorizationDate" jdbcType="VARCHAR" property="authorizationdate" />
+    <result column="awardsLevel" jdbcType="VARCHAR" property="awardslevel" />
+    <result column="awardsType" jdbcType="VARCHAR" property="awardstype" />
+    <result column="publishedState" jdbcType="VARCHAR" property="publishedstate" />
+    <result column="adjunct" jdbcType="VARCHAR" property="adjunct" />
+    <result column="bounty" jdbcType="INTEGER" property="bounty" />
+    <result column="firstTrial" jdbcType="VARCHAR" property="firsttrial" />
+    <result column="review" jdbcType="VARCHAR" property="review" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, dno, tno, author, title, awardsUnit, awardsDate, authorizationDate, awardsLevel, 
+    awardsType, publishedState, adjunct, bounty, firstTrial, review, remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from achievement
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from achievement
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.spring.bean.AchievementBean">
+    insert into achievement (id, dno, tno, 
+      author, title, awardsUnit, 
+      awardsDate, authorizationDate, awardsLevel, 
+      awardsType, publishedState, adjunct, 
+      bounty, firstTrial, review, 
+      remark)
+    values (#{id,jdbcType=VARCHAR}, #{dno,jdbcType=VARCHAR}, #{tno,jdbcType=VARCHAR}, 
+      #{author,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{awardsunit,jdbcType=VARCHAR}, 
+      #{awardsdate,jdbcType=VARCHAR}, #{authorizationdate,jdbcType=VARCHAR}, #{awardslevel,jdbcType=VARCHAR}, 
+      #{awardstype,jdbcType=VARCHAR}, #{publishedstate,jdbcType=VARCHAR}, #{adjunct,jdbcType=VARCHAR}, 
+      #{bounty,jdbcType=INTEGER}, #{firsttrial,jdbcType=VARCHAR}, #{review,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.spring.bean.AchievementBean">
+    insert into achievement
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="dno != null">
+        dno,
+      </if>
+      <if test="tno != null">
+        tno,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="awardsunit != null">
+        awardsUnit,
+      </if>
+      <if test="awardsdate != null">
+        awardsDate,
+      </if>
+      <if test="authorizationdate != null">
+        authorizationDate,
+      </if>
+      <if test="awardslevel != null">
+        awardsLevel,
+      </if>
+      <if test="awardstype != null">
+        awardsType,
+      </if>
+      <if test="publishedstate != null">
+        publishedState,
+      </if>
+      <if test="adjunct != null">
+        adjunct,
+      </if>
+      <if test="bounty != null">
+        bounty,
+      </if>
+      <if test="firsttrial != null">
+        firstTrial,
+      </if>
+      <if test="review != null">
+        review,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="dno != null">
+        #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="tno != null">
+        #{tno,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="awardsunit != null">
+        #{awardsunit,jdbcType=VARCHAR},
+      </if>
+      <if test="awardsdate != null">
+        #{awardsdate,jdbcType=VARCHAR},
+      </if>
+      <if test="authorizationdate != null">
+        #{authorizationdate,jdbcType=VARCHAR},
+      </if>
+      <if test="awardslevel != null">
+        #{awardslevel,jdbcType=VARCHAR},
+      </if>
+      <if test="awardstype != null">
+        #{awardstype,jdbcType=VARCHAR},
+      </if>
+      <if test="publishedstate != null">
+        #{publishedstate,jdbcType=VARCHAR},
+      </if>
+      <if test="adjunct != null">
+        #{adjunct,jdbcType=VARCHAR},
+      </if>
+      <if test="bounty != null">
+        #{bounty,jdbcType=INTEGER},
+      </if>
+      <if test="firsttrial != null">
+        #{firsttrial,jdbcType=VARCHAR},
+      </if>
+      <if test="review != null">
+        #{review,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.spring.bean.AchievementBean">
+    update achievement
+    <set>
+      <if test="dno != null">
+        dno = #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="tno != null">
+        tno = #{tno,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="awardsunit != null">
+        awardsUnit = #{awardsunit,jdbcType=VARCHAR},
+      </if>
+      <if test="awardsdate != null">
+        awardsDate = #{awardsdate,jdbcType=VARCHAR},
+      </if>
+      <if test="authorizationdate != null">
+        authorizationDate = #{authorizationdate,jdbcType=VARCHAR},
+      </if>
+      <if test="awardslevel != null">
+        awardsLevel = #{awardslevel,jdbcType=VARCHAR},
+      </if>
+      <if test="awardstype != null">
+        awardsType = #{awardstype,jdbcType=VARCHAR},
+      </if>
+      <if test="publishedstate != null">
+        publishedState = #{publishedstate,jdbcType=VARCHAR},
+      </if>
+      <if test="adjunct != null">
+        adjunct = #{adjunct,jdbcType=VARCHAR},
+      </if>
+      <if test="bounty != null">
+        bounty = #{bounty,jdbcType=INTEGER},
+      </if>
+      <if test="firsttrial != null">
+        firstTrial = #{firsttrial,jdbcType=VARCHAR},
+      </if>
+      <if test="review != null">
+        review = #{review,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.spring.bean.AchievementBean">
+    update achievement
+    set dno = #{dno,jdbcType=VARCHAR},
+      tno = #{tno,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      awardsUnit = #{awardsunit,jdbcType=VARCHAR},
+      awardsDate = #{awardsdate,jdbcType=VARCHAR},
+      authorizationDate = #{authorizationdate,jdbcType=VARCHAR},
+      awardsLevel = #{awardslevel,jdbcType=VARCHAR},
+      awardsType = #{awardstype,jdbcType=VARCHAR},
+      publishedState = #{publishedstate,jdbcType=VARCHAR},
+      adjunct = #{adjunct,jdbcType=VARCHAR},
+      bounty = #{bounty,jdbcType=INTEGER},
+      firstTrial = #{firsttrial,jdbcType=VARCHAR},
+      review = #{review,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
