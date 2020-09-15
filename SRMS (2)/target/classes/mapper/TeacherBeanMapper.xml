@@ -1,194 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spring.dao.TeacherBeanMapper">
-	<resultMap id="BaseResultMap"
-		type="com.spring.bean.TeacherBean">
-		<id column="tno" jdbcType="VARCHAR" property="tno" />
-		<result column="name" jdbcType="VARCHAR" property="name" />
-		<result column="pwd" jdbcType="VARCHAR" property="pwd" />
-		<result column="birthday" jdbcType="VARCHAR"
-			property="birthday" />
-		<result column="dno" jdbcType="VARCHAR" property="dno" />
-		<result column="mobile" jdbcType="VARCHAR" property="mobile" />
-		<result column="photo" jdbcType="VARCHAR" property="photo" />
-		<result column="type" jdbcType="VARCHAR" property="type" />
-		<result column="remark" jdbcType="VARCHAR" property="remark" />
-		<association property="dept"
-			select="com.spring.dao.DeptBeanMapper.selectByPrimaryKey"
-			column="dno"></association>
-	</resultMap>
-	<sql id="Base_Column_List">
-		tno, name, pwd, birthday, dno, mobile, photo, type, remark
-	</sql>
-	<select id="selectByPrimaryKey" parameterType="java.lang.String"
-		resultMap="BaseResultMap">
-		select
-		*
-		from teacher t, dept d
-		<trim prefix="where" prefixOverrides="AND|OR| " suffixOverrides=",">
-			<set>
-				<if test="tno != null">
-					t.tno = #{tno,jdbcType=VARCHAR}
-				</if>
-				
-			</set>
-			and d.dno=t.tno
-		</trim>
-	</select>
-	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-		delete from teacher
-		where tno = #{tno,jdbcType=VARCHAR}
-	</delete>
-	<insert id="insert" parameterType="com.spring.bean.TeacherBean">
-		insert into teacher (tno, name, pwd,
-		birthday, dno, mobile,
-		photo, type, remark
-		)
-		values (#{tno,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
-		#{pwd,jdbcType=VARCHAR},
-		#{birthday,jdbcType=VARCHAR}, #{dno,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},
-		#{photo,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR},
-		#{remark,jdbcType=VARCHAR}
-		)
-	</insert>
-	<insert id="insertSelective"
-		parameterType="com.spring.bean.TeacherBean">
-		insert into teacher
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="tno != null">
-				tno,
-			</if>
-			<if test="name != null">
-				name,
-			</if>
-			<if test="pwd != null">
-				pwd,
-			</if>
-			<if test="birthday != null">
-				birthday,
-			</if>
-			<if test="dno != null">
-				dno,
-			</if>
-			<if test="mobile != null">
-				mobile,
-			</if>
-			<if test="photo != null">
-				photo,
-			</if>
-			<if test="type != null">
-				type,
-			</if>
-			<if test="remark != null">
-				remark,
-			</if>
-		</trim>
-		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="tno != null">
-				#{tno,jdbcType=VARCHAR},
-			</if>
-			<if test="name != null">
-				#{name,jdbcType=VARCHAR},
-			</if>
-			<if test="pwd != null">
-				#{pwd,jdbcType=VARCHAR},
-			</if>
-			<if test="birthday != null">
-				#{birthday,jdbcType=VARCHAR},
-			</if>
-			<if test="dno != null">
-				#{dno,jdbcType=VARCHAR},
-			</if>
-			<if test="mobile != null">
-				#{mobile,jdbcType=VARCHAR},
-			</if>
-			<if test="photo != null">
-				#{photo,jdbcType=VARCHAR},
-			</if>
-			<if test="type != null">
-				#{type,jdbcType=VARCHAR},
-			</if>
-			<if test="remark != null">
-				#{remark,jdbcType=VARCHAR},
-			</if>
-		</trim>
-	</insert>
-	<update id="updateByPrimaryKeySelective"
-		parameterType="com.spring.bean.TeacherBean">
-		update teacher
-		<set>
-			<if test="name != null">
-				name = #{name,jdbcType=VARCHAR},
-			</if>
-			<if test="pwd != null">
-				pwd = #{pwd,jdbcType=VARCHAR},
-			</if>
-			<if test="birthday != null">
-				birthday = #{birthday,jdbcType=VARCHAR},
-			</if>
-			<if test="dno != null">
-				dno = #{dno,jdbcType=VARCHAR},
-			</if>
-			<if test="mobile != null">
-				mobile = #{mobile,jdbcType=VARCHAR},
-			</if>
-			<if test="photo != null">
-				photo = #{photo,jdbcType=VARCHAR},
-			</if>
-			<if test="type != null">
-				type = #{type,jdbcType=VARCHAR},
-			</if>
-			<if test="remark != null">
-				remark = #{remark,jdbcType=VARCHAR},
-			</if>
-		</set>
-		where tno = #{tno,jdbcType=VARCHAR}
-	</update>
-	<update id="updateByPrimaryKey"
-		parameterType="com.spring.bean.TeacherBean">
-		update teacher
-		set name = #{name,jdbcType=VARCHAR},
-		pwd = #{pwd,jdbcType=VARCHAR},
-		birthday = #{birthday,jdbcType=VARCHAR},
-		dno = #{dno,jdbcType=VARCHAR},
-		mobile = #{mobile,jdbcType=VARCHAR},
-		photo = #{photo,jdbcType=VARCHAR},
-		type = #{type,jdbcType=VARCHAR},
-		remark = #{remark,jdbcType=VARCHAR}
-		where tno = #{tno,jdbcType=VARCHAR}
-	</update>
-	<select id="list" parameterType="com.spring.bean.TeacherBean"
-		resultMap="BaseResultMap">
+  <resultMap id="BaseResultMap" type="com.spring.bean.TeacherBean">
+    <id column="tno" jdbcType="VARCHAR" property="tno" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="dno" jdbcType="VARCHAR" property="dno" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <association property="dept" select="com.spring.dao.DeptBeanMapper.selectByPrimaryKey" column="dno"></association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    tno, name, dno, pwd, pic, birthday, tel, type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from teacher
+    where tno = #{tno,jdbcType=VARCHAR}
+  </select>
+  
+  <select id="loginTeacher" parameterType="com.spring.bean.TeacherBean" resultMap="BaseResultMap">
+    select 
+    *
+    from teacher
+    where name = #{name,jdbcType=VARCHAR} and pwd = #{pwd,jdbcType=VARCHAR}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from teacher
+    where tno = #{tno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.spring.bean.TeacherBean">
+    insert into teacher (tno, name, dno, 
+      pwd, pic, birthday, 
+      tel, type)
+    values (#{tno,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{dno,jdbcType=VARCHAR}, 
+      #{pwd,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, 
+      #{tel,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.spring.bean.TeacherBean">
+    insert into teacher
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tno != null">
+        tno,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="dno != null">
+        dno,
+      </if>
+      <if test="pwd != null">
+        pwd,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="tel != null">
+        tel,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tno != null">
+        #{tno,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="dno != null">
+        #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.spring.bean.TeacherBean">
+    update teacher
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="dno != null">
+        dno = #{dno,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        pwd = #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        tel = #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where tno = #{tno,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.spring.bean.TeacherBean">
+    update teacher
+    set name = #{name,jdbcType=VARCHAR},
+      dno = #{dno,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      tel = #{tel,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR}
+    where tno = #{tno,jdbcType=VARCHAR}
+  </update>
+   
+  <select id="list" parameterType="com.spring.bean.TeacherBean" resultMap="BaseResultMap">
 		select * from teacher t,dept d
-		<trim prefix="where" prefixOverrides="OR|AND| "
-			suffixOverrides=",">
-			<set>
-			<if test="name != null">
-				name = #{name,jdbcType=VARCHAR}
-			</if>
-			<if test="pwd != null">
-				and pwd = #{pwd,jdbcType=VARCHAR}
-			</if>
-			<if test="birthday != null">
-				and birthday = #{birthday,jdbcType=VARCHAR}
-			</if>
-			<if test="dno != null">
-				and dno = #{dno,jdbcType=VARCHAR}
-			</if>
-			<if test="mobile != null">
-				and mobile = #{mobile,jdbcType=VARCHAR}
-			</if>
-			<if test="photo != null">
-				and photo = #{photo,jdbcType=VARCHAR}
-			</if>
-			<if test="type != null">
-				and type = #{type,jdbcType=VARCHAR}
-			</if>
-			<if test="remark != null">
-				and remark = #{remark,jdbcType=VARCHAR}
-			</if>
-		</set>
-			and t.dno = d.dno
-		</trim>
+	       <where>
+	       and t.dno = d.dno
+	       </where>
 	</select>
 </mapper>

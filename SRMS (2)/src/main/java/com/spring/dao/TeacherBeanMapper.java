@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import com.spring.bean.TeacherBean;
-
+@Repository
 public interface TeacherBeanMapper {
     int deleteByPrimaryKey(String tno);
 
@@ -21,4 +22,9 @@ public interface TeacherBeanMapper {
     int updateByPrimaryKey(TeacherBean record);
 
     List<TeacherBean> list(TeacherBean record);
+    
+    /**
+     * 登录验证
+     */
+    TeacherBean loginTeacher(TeacherBean record);
 }

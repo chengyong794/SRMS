@@ -18,5 +18,5 @@ public interface DeptBeanMapper {
 
     int updateByPrimaryKey(DeptBean record);
     
-    public List<DeptBean> list(DeptBean dept);
+    public List<DeptBean> list(DeptBean record);
 }

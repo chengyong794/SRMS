@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-adsd
+<jsp:forward page="login.jsp"></jsp:forward>
 </body>
 </html>

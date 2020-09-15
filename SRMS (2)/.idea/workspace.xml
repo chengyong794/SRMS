@@ -7,6 +7,123 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2084fde-668c-414e-815c-ba640c737e3c" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/Handler/SpringMvcHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/dao/DeptBeanMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/dao/TeacherBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/AchievementBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/AnnuaBonusBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/AnnuaBonusBeanKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/DeptBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/bean/DeptBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/PatentSoftSealBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/TeacherBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/bean/TeacherBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/ThesisBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/TopicBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/bean/TreatiseBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/AchievementBeanMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/AnnuaBonusBeanMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/DeptBeanMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/dao/DeptBeanMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/PatentSoftSealBeanMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/TeacherBeanMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/dao/TeacherBeanMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/ThesisBeanMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/TopicBeanMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/dao/TreatiseBeanMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/service/DeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/service/DeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/service/TopicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/service/core/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/service/core/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AchievementBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AnnuaBonusBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DeptBeanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DeptBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PatentSoftSealBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TeacherBeanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeacherBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ThesisBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TopicBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TreatiseBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/deptlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/deptlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/teacherlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/teacherlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/AchievementBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/AnnuaBonusBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/AnnuaBonusBeanKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/DeptBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/DeptBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/PatentSoftSealBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/TeacherBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/TeacherBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/ThesisBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/TopicBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/bean/TreatiseBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/AchievementBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/AnnuaBonusBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/PatentSoftSealBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/TeacherBeanMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/TeacherBeanMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/ThesisBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/TopicBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/dao/TreatiseBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/DeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/DeptService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/TopicService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/core/BaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/com/spring/service/core/BaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/AchievementBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/AnnuaBonusBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/DeptBeanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/DeptBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/PatentSoftSealBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/TeacherBeanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/TeacherBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/ThesisBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/TopicBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/classes/mapper/TreatiseBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/WEB-INF/conf/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/deptlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/deptlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SRMS/teacherlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SRMS/teacherlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/AchievementBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/AnnuaBonusBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/AnnuaBonusBeanKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/DeptBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/bean/DeptBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/PatentSoftSealBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/TeacherBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/bean/TeacherBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/ThesisBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/TopicBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/bean/TreatiseBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/controller/TeacherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/AchievementBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/AnnuaBonusBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/PatentSoftSealBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/TeacherBeanMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/dao/TeacherBeanMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/ThesisBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/TopicBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/dao/TreatiseBeanMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/service/DeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/service/DeptService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/service/TopicService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/service/core/BaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/service/core/BaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AchievementBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AnnuaBonusBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DeptBeanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DeptBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PatentSoftSealBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TeacherBeanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TeacherBeanMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ThesisBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TopicBeanMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TreatiseBeanMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,29 +167,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/software/Android SDK" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\科研\SRMS (2)\src\main\webapp\WEB-INF\conf" />
+      <recent name="C:\Users\PC\Desktop\科研\SRMS (2)\src\main\webapp" />
+      <recent name="C:\Users\PC\Desktop\科研\SRMS (2)\src\main\resources\mapper" />
+      <recent name="C:\Users\PC\Desktop\科研\SRMS (2)\src\main\java\com\spring" />
+      <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\java\com\spring" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\resources\mapper" />
       <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\webapp\WEB-INF" />
       <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\webapp" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\java\com\spring" />
-      <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web" />
-      <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\webapp\WEB-INF" />
-      <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\webapp\WEB-INF\conf" />
-      <recent name="E:\OneDrive\OneDrive - lanol\workspace\idea\web\SRMS\src\main\java" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="tomcat-8.5.46" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="tomcat-8.5.46" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SRMS__2__war/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -85,6 +201,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="未命名_SRMS_3" />
+        <option name="DEPLOY_TOMCAT_APPS" value="true" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -192,107 +309,159 @@
       <workItem from="1600012462214" duration="1618000" />
       <workItem from="1600014115261" duration="549000" />
       <workItem from="1600172899910" duration="709000" />
-      <workItem from="1600173632085" duration="460000" />
+      <workItem from="1600173632085" duration="4153000" />
+      <workItem from="1600177852574" duration="1364000" />
     </task>
+    <task id="LOCAL-00001" summary="第一次提交 科研成果管理">
+      <created>1600174349022</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600174349022</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交 科研成果管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交 科研成果管理" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="396" key="#Tomcat_Server" timestamp="1600012545063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="734" y="396" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1600012545063" />
-    <state x="127" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600173816155">
+    <state x="127" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600178528902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="127" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1600173816155" />
+    <state x="127" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1600178528902" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600013023903" />
     <state x="688" y="157" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1600012880742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="688" y="157" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1600012880742" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600175968588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1600175968588" />
     <state x="711" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1600007122753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600007122753" />
+    <state x="300" y="0" key="CommitChangelistDialog2" timestamp="1600174345238">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="300" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1600174345238" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1600014071612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600014071612" />
-    <state width="1126" height="80" key="GridCell.Tab.0.bottom" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.0.bottom" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667475" />
-    <state width="1126" height="80" key="GridCell.Tab.0.center" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.0.center" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667475" />
-    <state width="1126" height="80" key="GridCell.Tab.0.left" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.0.left" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667475" />
-    <state width="1126" height="80" key="GridCell.Tab.0.right" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.0.right" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667475" />
-    <state width="1126" height="80" key="GridCell.Tab.1.bottom" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.1.bottom" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
-    <state width="1126" height="80" key="GridCell.Tab.1.center" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.1.center" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
-    <state width="1126" height="80" key="GridCell.Tab.1.left" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.1.left" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667475" />
-    <state width="1126" height="80" key="GridCell.Tab.1.right" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.1.right" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
-    <state width="1126" height="80" key="GridCell.Tab.2.bottom" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.2.bottom" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
-    <state width="1126" height="80" key="GridCell.Tab.2.center" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.2.center" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
-    <state width="1126" height="80" key="GridCell.Tab.2.left" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.2.left" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
-    <state width="1126" height="80" key="GridCell.Tab.2.right" timestamp="1600173886669">
+    <state width="1126" height="190" key="GridCell.Tab.2.right" timestamp="1600179419032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1126" height="80" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1600173886669" />
+    <state width="1126" height="190" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1600179419032" />
     <state width="1293" height="278" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600014667476" />
+    <state width="1126" height="190" key="GridCell.Tab.3.bottom" timestamp="1600179352821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1126" height="190" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600179352821" />
+    <state width="1126" height="190" key="GridCell.Tab.3.center" timestamp="1600179352821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1126" height="190" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1600179352821" />
+    <state width="1126" height="190" key="GridCell.Tab.3.left" timestamp="1600179352821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1126" height="190" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1600179352821" />
+    <state width="1126" height="190" key="GridCell.Tab.3.right" timestamp="1600179352821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1126" height="190" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1600179352821" />
     <state x="328" y="12" key="SettingsEditor" timestamp="1600174096323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="328" y="12" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1600174096323" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600014075419" />
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1600173645065">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600174476309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1600173645065" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600174476309" />
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1600177851570">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1600177851570" />
     <state x="459" y="211" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1600014073169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="459" y="211" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600014073169" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/spring/controller/FileController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

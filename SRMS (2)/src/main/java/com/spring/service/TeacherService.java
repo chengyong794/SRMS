@@ -18,9 +18,9 @@ public class TeacherService implements BaseService<TeacherBean> {
 	@Autowired
 	TeacherBeanMapper teacherDao;
 	@Override
-	public List<TeacherBean> list(TeacherBean t) {
-		// TODO Auto-generated method stub
-		return teacherDao.list(new TeacherBean());
+	public List<TeacherBean> list(Object obj) {
+		
+		return teacherDao.list((TeacherBean)obj);
 	}
 
 	@Override
@@ -45,6 +45,11 @@ public class TeacherService implements BaseService<TeacherBean> {
 	public int delete(String tno) {
 		// TODO Auto-generated method stub
 		return teacherDao.deleteByPrimaryKey(tno);
+	}
+
+	@Override
+	public TeacherBean loginTeacher(TeacherBean record) {
+		return teacherDao.loginTeacher(record);
 	}
 	
 	

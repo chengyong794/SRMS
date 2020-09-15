@@ -1,99 +1,90 @@
 package com.spring.bean;
 
 public class TeacherBean {
-	private String tno;
+    private String tno;
 
-	private String name;
+    private String name;
 
-	private String pwd;
+    private String dno;
 
-	private String birthday;
+    private String pwd;
 
-	private String dno;
+    private String pic;
 
-	private String mobile;
+    private String birthday;
 
-	private String photo;
+    private String tel;
 
-	private String type;
+    private String type;
+    
+    private DeptBean dept;
 
-	private String remark;
+    public String getTno() {
+        return tno;
+    }
 
-	private DeptBean dept;
+    public void setTno(String tno) {
+        this.tno = tno == null ? null : tno.trim();
+    }
 
-	public String getTno() {
-		return tno;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setTno(String tno) {
-		this.tno = tno == null ? null : tno.trim();
-	}
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getDno() {
+        return dno;
+    }
 
-	public void setName(String name) {
-		this.name = name == null ? null : name.trim();
-	}
+    public void setDno(String dno) {
+        this.dno = dno == null ? null : dno.trim();
+    }
 
-	public String getPwd() {
-		return pwd;
-	}
+    public String getPwd() {
+        return pwd;
+    }
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd == null ? null : pwd.trim();
-	}
+    public void setPwd(String pwd) {
+        this.pwd = pwd == null ? null : pwd.trim();
+    }
 
-	public String getBirthday() {
-		return birthday;
-	}
+    public String getPic() {
+        return pic;
+    }
 
-	public void setBirthday(String birthday) {
-		this.birthday = birthday == null ? null : birthday.trim();
-	}
+    public void setPic(String pic) {
+        this.pic = pic == null ? null : pic.trim();
+    }
 
-	public String getDno() {
-		return dno;
-	}
+    public String getBirthday() {
+        return birthday;
+    }
 
-	public void setDno(String dno) {
-		this.dno = dno == null ? null : dno.trim();
-	}
+    public void setBirthday(String birthday) {
+        this.birthday = birthday == null ? null : birthday.trim();
+    }
 
-	public String getMobile() {
-		return mobile;
-	}
+    public String getTel() {
+        return tel;
+    }
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile == null ? null : mobile.trim();
-	}
+    public void setTel(String tel) {
+        this.tel = tel == null ? null : tel.trim();
+    }
 
-	public String getPhoto() {
-		return photo;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public void setPhoto(String photo) {
-		this.photo = photo == null ? null : photo.trim();
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type == null ? null : type.trim();
-	}
-
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark == null ? null : remark.trim();
-	}
-
-	public DeptBean getDept() {
+    public void setType(String type) {
+        this.type = type == null ? null : type.trim();
+    }
+    
+    
+    public DeptBean getDept() {
 		return dept;
 	}
 
@@ -102,8 +93,8 @@ public class TeacherBean {
 	}
 
 	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "tno" + tno;
-	}
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return "tno"+tno;
+    }
 }

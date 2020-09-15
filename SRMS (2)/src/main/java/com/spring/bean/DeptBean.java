@@ -5,11 +5,9 @@ public class DeptBean {
 
     private String name;
 
-    private String principal;
+    private String leader;
 
-    private String mobile;
-
-    private String remark;
+    private String tel;
 
     public String getDno() {
         return dno;
@@ -27,28 +25,25 @@ public class DeptBean {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getPrincipal() {
-        return principal;
+    public String getLeader() {
+        return leader;
     }
 
-    public void setPrincipal(String principal) {
-        this.principal = principal == null ? null : principal.trim();
+    public void setLeader(String leader) {
+        this.leader = leader == null ? null : leader.trim();
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getTel() {
+        return tel;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
+    public void setTel(String tel) {
+        this.tel = tel == null ? null : tel.trim();
     }
 
-    public String getRemark() {
-        return remark;
+    @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return "dno:"+dno+"\tname:"+name+"\tleable:"+leader+"\ttel:"+tel;
     }
-
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
-
 }

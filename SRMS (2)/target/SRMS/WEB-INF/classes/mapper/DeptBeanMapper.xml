@@ -4,12 +4,11 @@
   <resultMap id="BaseResultMap" type="com.spring.bean.DeptBean">
     <id column="dno" jdbcType="VARCHAR" property="dno" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="principal" jdbcType="VARCHAR" property="principal" />
-    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="leader" jdbcType="VARCHAR" property="leader" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
   </resultMap>
   <sql id="Base_Column_List">
-    dno, name, principal, mobile, remark
+    dno, name, leader, tel
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -22,10 +21,10 @@
     where dno = #{dno,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.spring.bean.DeptBean">
-    insert into dept (dno, name, principal, 
-      mobile, remark)
-    values (#{dno,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{principal,jdbcType=VARCHAR}, 
-      #{mobile,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+    insert into dept (dno, name, leader, 
+      tel)
+    values (#{dno,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{leader,jdbcType=VARCHAR}, 
+      #{tel,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.spring.bean.DeptBean">
     insert into dept
@@ -36,14 +35,11 @@
       <if test="name != null">
         name,
       </if>
-      <if test="principal != null">
-        principal,
+      <if test="leader != null">
+        leader,
       </if>
-      <if test="mobile != null">
-        mobile,
-      </if>
-      <if test="remark != null">
-        remark,
+      <if test="tel != null">
+        tel,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -53,14 +49,11 @@
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="principal != null">
-        #{principal,jdbcType=VARCHAR},
+      <if test="leader != null">
+        #{leader,jdbcType=VARCHAR},
       </if>
-      <if test="mobile != null">
-        #{mobile,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null">
-        #{remark,jdbcType=VARCHAR},
+      <if test="tel != null">
+        #{tel,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -70,14 +63,11 @@
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="principal != null">
-        principal = #{principal,jdbcType=VARCHAR},
+      <if test="leader != null">
+        leader = #{leader,jdbcType=VARCHAR},
       </if>
-      <if test="mobile != null">
-        mobile = #{mobile,jdbcType=VARCHAR},
-      </if>
-      <if test="remark != null">
-        remark = #{remark,jdbcType=VARCHAR},
+      <if test="tel != null">
+        tel = #{tel,jdbcType=VARCHAR},
       </if>
     </set>
     where dno = #{dno,jdbcType=VARCHAR}
@@ -85,12 +75,11 @@
   <update id="updateByPrimaryKey" parameterType="com.spring.bean.DeptBean">
     update dept
     set name = #{name,jdbcType=VARCHAR},
-      principal = #{principal,jdbcType=VARCHAR},
-      mobile = #{mobile,jdbcType=VARCHAR},
-      remark = #{remark,jdbcType=VARCHAR}
+      leader = #{leader,jdbcType=VARCHAR},
+      tel = #{tel,jdbcType=VARCHAR}
     where dno = #{dno,jdbcType=VARCHAR}
   </update>
-  <select id="list" parameterType="com.spring.bean.DeptBean" resultMap="BaseResultMap">
+  <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
   	select
   	<include refid="Base_Column_List" />
     from dept

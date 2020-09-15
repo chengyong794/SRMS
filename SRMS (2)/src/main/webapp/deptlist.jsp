@@ -1,8 +1,6 @@
-<%@page import="com.spring.bean.DeptBean"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String path = request.getContextPath();
 String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -49,12 +47,11 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 	<link rel="stylesheet" href="css/typography.css">
 	<!-- 公共样式 结束 -->
 	<script type="text/javascript">
-		function aa(dno, name, principal, mobile,remark) {
+		function aa(dno, name, leader, tel) {
 			document.getElementById("dno").value = dno;
 			document.getElementById("name").value = name;
-			document.getElementById("principal").value = principal;
-			document.getElementById("mobile").value = mobile;
-			document.getElementById("remark").value = remark;
+			document.getElementById("leader").value = leader;
+			document.getElementById("tel").value = tel;
 		}
 	</script>
 </head>
@@ -66,12 +63,6 @@ body {
 .iq-card{
 	margin:30px 50px;
 }
-#addbtn{
-	float:right;
-	position: relative;
-	top: -8px;
-	left: -50px;;
-}
 </style>
 <body>
 	<div class="Body">
@@ -81,9 +72,20 @@ body {
 					<!-- <div class="layui-input-inline">
 							<input type="text" name="name" required lay-verify="required" placeholder="输入菜品名称" autocomplete="off" class="layui-input">
 						</div> -->
-					
+					<div class="layui-input-inline">
+						<select required name="dishestypeid" id="provid"
+							lay-filter="provid">
+							<option value=""></option>
+							<option value="1"></option>
+							<option value="2"></option>
+							<option value="3"></option>
+						</select>
+					</div>
+					<input class="layui-btn" type="submit" lay-submit
+						lay-filter="formDemo" value="检索" />
 					<!-- <a href="getall"><input class="layui-btn" type="button" lay-submit lay-filter="formDemo" value="返回" /></a> -->
-					
+					<button style="margin-left: 1380px;" type="button"
+						class="layui-btn" data-toggle="modal" data-target="#exampleModal">添加部门</button>
 				</div>
 			</form>
 			<script>
@@ -97,14 +99,11 @@ body {
 				</div>
 			</div>
 			<div class="iq-card-body" >
-			<button id="addbtn" style="float:right;" type="button"
-					class="btn btn-success"	 data-toggle="modal" data-target="#exampleModal">添加部门</button>
 				<p>
 					The
 					<code>.table </code>
 					class adds basic styling to a table.
 				</p>
-				
 				<table class="table">
 					<thead>
 						<tr>
@@ -112,7 +111,6 @@ body {
 							<th scope="col">部门名称</th>
 							<th scope="col">负责人</th>
 							<th scope="col">联系电话</th>
-							<th scope="col">备注</th>
 							<th scope="col">操作</th>
 						</tr>
 					</thead>
@@ -122,13 +120,12 @@ body {
 							<tr>
 								<td scope="row">${dept.dno}</td>
 								<td>${dept.name}</td>
-								<td>${dept.principal}</td>
-								<td>${dept.mobile}</td>
-								<td>${dept.remark}</td>
+								<td>${dept.leader}</td>
+								<td>${dept.tel}</td>
 								<td><a style="color: white" class="btn btn-danger"
 									onclick="delCustomList(this,'${dept.dno}')">删除</a>
 									<button type="button" class="btn btn-primary"
-										onclick="aa('${dept.dno}','${dept.name}','${dept.principal}','${dept.mobile}','${dept.remark}')"
+										onclick="aa('${dept.dno}','${dept.name}','${dept.leader}','${dept.tel}')"
 										data-toggle="modal" data-target="#deptchange">编辑</button></td>
 							</tr>
 						</c:forEach>
@@ -138,7 +135,7 @@ body {
 				</table>
 			</div>
 		</div>
-		
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 			aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
@@ -149,10 +146,9 @@ body {
 							aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						
 					</div>
 					<div class="modal-body">
-						<form action="dept/save" style="margin-left: 100px;">
+						<form action="adddept" style="margin-left: 100px;">
 							<div style="margin-left: -100px;">
 								<div class="input-group flex-nowrap">
 									<div class="input-group-prepend">
@@ -175,8 +171,8 @@ body {
 									<div style="margin-top: 10px" class="input-group-prepend">
 										<span class="input-group-text" id="addon-wrapping">负&nbsp;&nbsp;责&nbsp;&nbsp;人</span>
 									</div>
-									<input required autocomplete="off" name="principal"
-										style="width: 100px; margin-top: 10px"  type="text"
+									<input required autocomplete="off" name="leader"
+										style="width: 100px; margin-top: 10px" " type="text"
 										class="form-control" aria-label="负责人"
 										aria-describedby="addon-wrapping">
 								</div>
@@ -184,25 +180,15 @@ body {
 									<div style="margin-top: 10px" class="input-group-prepend">
 										<span class="input-group-text" id="addon-wrapping">联系电话</span>
 									</div>
-									<input required autocomplete="off" name="mobile"
-										style="width: 100px; margin-top: 10px" type="text"
+									<input required autocomplete="off" name="tel"
+										style="width: 100px; margin-top: 10px" " type="text"
 										maxlength="11" class="form-control" aria-label="联系电话"
-										aria-describedby="addon-wrapping">
-								</div>
-								<div class="input-group flex-nowrap">
-									<div style="margin-top: 10px" class="input-group-prepend">
-										<span class="input-group-text" id="addon-wrapping">&nbsp;&nbsp;备&nbsp;&nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;</span>
-									</div>
-									<input required autocomplete="off" name="remark"
-										style="width: 100px; margin-top: 10px"  type="text"
-										maxlength="11" class="form-control" aria-label="备注"
 										aria-describedby="addon-wrapping">
 								</div>
 								<input id="sub" class="btn btn-outline-dark" type="submit"
 									lay-submit lay-filter="formDemo" value="确定"
 									style="margin-left: 170px; margin-top: 10px; width: 100px" />
 							</div>
-							
 
 						</form>
 					</div>
@@ -227,14 +213,14 @@ body {
 						</button>
 					</div>
 					<div class="modal-body">
-						<form action="dept/update" style="margin-left: 100px;">
+						<form action="updept" style="margin-left: 100px;">
 							<div style="margin-left: -100px;">
 								<div class="input-group flex-nowrap">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="addon-wrapping">部门编号</span>
 									</div>
 									<input id="dno" name="dno" readonly="readonly"
-										autocomplete="off" name="dept.dno" style="width: 100px;"
+										autocomplete="off" name="dno" style="width: 100px;"
 										type="text" class="form-control" aria-label="部门编号"
 										aria-describedby="addon-wrapping">
 								</div>
@@ -243,7 +229,7 @@ body {
 										<span class="input-group-text" id="addon-wrapping">部门名称</span>
 									</div>
 									<input required id="name" name="name" autocomplete="off"
-										style="width: 100px; margin-top: 10px" type="text"
+										name="name" style="width: 100px; margin-top: 10px" type="text"
 										class="form-control" aria-label="部门名称"
 										aria-describedby="addon-wrapping">
 								</div>
@@ -251,27 +237,18 @@ body {
 									<div style="margin-top: 10px" class="input-group-prepend">
 										<span class="input-group-text" id="addon-wrapping">负&nbsp;&nbsp;责&nbsp;&nbsp;人</span>
 									</div>
-									<input required id="principal" name="principal" autocomplete="off"
-										style="width: 100px; margin-top: 10px"
-										type="text" class="form-control" aria-label="负责人"
+									<input required id="leader" name="leader" autocomplete="off"
+										name="leader" style="width: 100px; margin-top: 10px"
+										" type="text" class="form-control" aria-label="负责人"
 										aria-describedby="addon-wrapping">
 								</div>
 								<div class="input-group flex-nowrap">
 									<div style="margin-top: 10px" class="input-group-prepend">
 										<span class="input-group-text" id="addon-wrapping">联系电话</span>
 									</div>
-									<input required id="mobile" name="mobile" autocomplete="off"
+									<input required id="tel" name="tel" autocomplete="off"
 										name="tel" style="width: 100px; margin-top: 10px"
-										type="text" maxlength="11" class="form-control"
-										aria-label="联系电话" aria-describedby="addon-wrapping">
-								</div>
-								<div class="input-group flex-nowrap">
-									<div style="margin-top: 10px" class="input-group-prepend">
-										<span class="input-group-text" id="addon-wrapping">&nbsp;&nbsp;备&nbsp;&nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;</span>
-									</div>
-									<input required id="remark" name="remark" autocomplete="off"
-										style="width: 100px; margin-top: 10px"
-										type="text" maxlength="11" class="form-control"
+										" type="text" maxlength="11" class="form-control"
 										aria-label="联系电话" aria-describedby="addon-wrapping">
 								</div>
 								<input id="sub" class="btn btn-outline-dark" type="submit"
